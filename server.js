@@ -1,5 +1,5 @@
-var express    = require('express');
-var app        = express();
+var express = require('express');
+var app = express();
 var bodyParser = require('body-parser');
 var crypto = require('crypto');
 
@@ -10,10 +10,10 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;
 
-var mongoose   = require('mongoose');
+var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
 
-var Comment     = require('./app/models/comment');
+var Comment = require('./app/models/comment');
 
 
 app.get('/', function(req, res) {
