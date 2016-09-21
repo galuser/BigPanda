@@ -1,7 +1,7 @@
 <div class="form-container">
-    <img class="inline-block" ng-src="https://www.gravatar.com/avatar/{{ comment.img }}" />
-    <div class="inline-block">
-        <div>{{ comment.username }}</div>
+    <img class="img-comment" ng-src="https://www.gravatar.com/avatar/{{ comment.img }}?s=50" />
+    <div class="info-comment">
+        <div class="bold">{{ comment.username }}</div>
         <div>{{ comment.message }}</div>
     </div>
 </div>
