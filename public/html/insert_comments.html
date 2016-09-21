@@ -1,0 +1,22 @@
+<div ng-controller="postController">
+    <form name="commentForm" ng-submit="submitForm()" novalidate>
+        <input name="name" type="email" placeholder="Email" ng-model="user.name" class="input" required>
+        <input name="message" type="text" placeholder="Message" ng-model="user.message" class="input" required>
+        <button type="submit" class="btn btn-primary submit-button"
+                ng-disabled="commentForm.name.$error.required ||
+                        commentForm.message.$error.required ||
+                        commentForm.name.$invalid">
+            SUBMIT</button>
+    </form>
+</div>
+
+<!--<form name="commentForm" class="css-form" ng-controller="insertController" novalidate>-->
+    <!--<input name="name" type="email" placeholder="Email" ng-model="user.name" required>-->
+    <!--<input name="message" type="text" placeholder="Message" ng-model="user.message" required>-->
+    <!--<button type="button" class="btn"-->
+            <!--ng-disabled="commentForm.name.$error.required ||-->
+                        <!--commentForm.message.$error.required ||-->
+                        <!--commentForm.name.$invalid"-->
+            <!--ng-click="insert(user)">-->
+        <!--Submit</button>-->
+<!--</form>-->
