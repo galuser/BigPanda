@@ -2,10 +2,8 @@
     <i class="glyphicon glyphicon-search"></i>
     <input type="text" placeholder="Filter" class="input" ng-model="searchText">
 </div>
-<div class="flex-container">
-    <div ng-controller="viewController">
-        <div ng-repeat="comment in comments | filter:searchText">
-            <div comment-form="comment"></div>
-        </div>
+<div class="flex-container" ng-controller="viewController">
+    <div ng-repeat="comment in comments | filter:searchText">
+        <div comment-form="comment"></div>
     </div>
 </div>
