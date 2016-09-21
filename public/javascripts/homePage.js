@@ -34,7 +34,6 @@ myApp.controller('postController', function($scope, $http) {
         })
             .success(function(data) {
                 if (data.errors) {
-                    // Showing errors.
                     $scope.errorName = data.errors.name;
                     $scope.errorMessage = data.errors.message;
                 } else {
@@ -49,5 +48,5 @@ myApp.controller("viewController", function($scope, $http){
     $http.get("/get").success(function(response){
         $scope.comments = response;
     });
-
+    
 });
